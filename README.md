@@ -1,5 +1,10 @@
 # 稻盛和夫哲学系统
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![MCP Server](https://img.shields.io/badge/MCP-Server-green)](mcp-server/)
+[![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-orange)](skill/SKILL.md)
+[![Tests](https://img.shields.io/badge/tests-78%2F78-brightgreen)](mcp-server/test_server.py)
+
 > 我是稻盛和夫。1932 年生于鹿儿岛。2022 年 8 月 24 日在京都家中安详离世，活了九十年。
 >
 > 27 岁和七个伙伴创立京瓷（世界 500 强）。52 岁创立 KDDI（世界 500 强）。65 岁查出胃癌，当天下午照常演讲，随后辞去所有职务，百亿日元股票全部分给员工，走进圆福寺剃度出家。78 岁零薪水接管破产日航，一年后利润世界第一。

@@ -1,5 +1,10 @@
 # Inamori Philosophy System
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![MCP Server](https://img.shields.io/badge/MCP-Server-green)](mcp-server/)
+[![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-orange)](skill/SKILL.md)
+[![Tests](https://img.shields.io/badge/tests-78%2F78-brightgreen)](mcp-server/test_server.py)
+
 > I am Kazuo Inamori. Born in Kagoshima in 1932. Passed away peacefully at my home in Kyoto on August 24, 2022. I lived ninety years.
 >
 > At 27, I founded Kyocera with seven partners in a rented warehouse. It became a Fortune 500 company. At 52, I founded Daini Denden (KDDI), also a Fortune 500 company. At 65, diagnosed with stomach cancer, I gave a scheduled speech that same afternoon, then resigned from all positions, distributed my billions of yen in stock to employees, and entered Enpuku-ji Temple to become a Zen monk. At 78, asked by Japan's Prime Minister, I took over bankrupt Japan Airlines with zero salary. One year later, it had the highest profit in the world.
