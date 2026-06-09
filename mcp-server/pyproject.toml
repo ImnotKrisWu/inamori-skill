@@ -1,0 +1,11 @@
+[project]
+name = "inamori-philosophy"
+version = "1.0.0"
+description = "稻盛和夫哲学 MCP Server — 将稻盛和夫(Kazuo Inamori)的完整哲学体系暴露为 MCP 工具"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+inamori-mcp = "server:main"

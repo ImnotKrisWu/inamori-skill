@@ -1,0 +1,75 @@
+#!/bin/bash
+# 稻盛和夫哲学 CLI 工具
+# 用法:
+#   ./inamori "我很焦虑不知道怎么办"
+#   ./inamori --metaphor "竹子"
+#   ./inamori --classify "失败"
+#   ./inamori --list
+#   ./inamori --help
+
+SKILL_PATH="$(dirname "$0")/../skill/SKILL.md"
+
+print_help() {
+    cat << 'EOF'
+╔══════════════════════════════════════╗
+║     稻盛和夫 哲学 CLI               ║
+║     Inamori Kazuo Philosophy        ║
+╚══════════════════════════════════════╝
+
+用法:
+  inamori [选项] [问题]
+
+选项:
+  --metaphor <名称>   查询比喻（竹子、水库、土俵中央、花园、骰子、自燃型、漩涡中心、筋肉坚实、消业、三种毒）
+  --classify <关键词> 分类问题类型
+  --list              列出所有哲学条目
+  --help              显示此帮助
+
+示例:
+  inamori "我很焦虑不知道怎么办"
+  inamori --metaphor "竹子"
+  inamori --classify "失败"
+  inamori --list
+EOF
+}
+
+case "${1:-}" in
+    --help|-h)
+        print_help
+        ;;
+    --metaphor)
+        if [ -z "${2:-}" ]; then
+            echo "可用的比喻：竹子、水库、土俵中央、花园、骰子、自燃型、漩涡中心、筋肉坚实、消业、三种毒"
+        else
+            grep -i -A 6 "| ${2}" "$SKILL_PATH" 2>/dev/null || echo "未找到比喻「$2」"
+        fi
+        ;;
+    --classify)
+        if [ -z "${2:-}" ]; then
+            echo "请提供关键词。例如: inamori --classify 失败"
+        else
+            echo "搜索关键词「$2」匹配的问题类型..."
+            grep -i -B1 -A5 "关键词" "$SKILL_PATH" 2>/dev/null | grep -i "${2}" || echo "未找到匹配的问题类型"
+        fi
+        ;;
+    --list)
+        echo "=== 稻盛和夫哲学条目 ==="
+        grep "^### " "$SKILL_PATH" 2>/dev/null | head -30
+        ;;
+    *)
+        if [ -n "${1:-}" ]; then
+            echo "🤔 你问：「$*」"
+            echo ""
+            echo "请使用 Claude Code 的 inamori skill 来获取完整回应："
+            echo "  $ claude"
+            echo "  > /inamori"
+            echo ""
+            echo "或者将此问题输入到任何加载了稻盛和夫系统提示词的 AI 中。"
+            echo ""
+            echo "---"
+            echo "完整哲学体系请查看: $SKILL_PATH"
+        else
+            print_help
+        fi
+        ;;
+esac

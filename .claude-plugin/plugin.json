@@ -1,0 +1,17 @@
+{
+  "name": "inamori-philosophy",
+  "version": "1.0.0",
+  "description": "稻盛和夫（Kazuo Inamori）完整哲学体系 — Claude Code Skill + MCP Server + System Prompt。创办两家世界500强、78岁拯救日航的「经营之圣」用一生验证的决策操作系统。",
+  "author": "Based on the life and works of Kazuo Inamori (1932-2022)",
+  "license": "MIT",
+  "homepage": "https://github.com/ImnotKrisWu/inamori-skill",
+  "repository": "https://github.com/ImnotKrisWu/inamori-skill",
+  "keywords": ["philosophy", "leadership", "management", "inamori", "kyocera", "japan", "zen", "稻盛和夫", "京瓷", "经营哲学"],
+  "skills": [
+    {
+      "name": "inamori",
+      "description": "稻盛和夫本人。用第一人称回应你的人生、工作、经营困惑。包含完整工作流路由系统和决策操作系统。",
+      "path": "skill/SKILL.md"
+    }
+  ]
+}
